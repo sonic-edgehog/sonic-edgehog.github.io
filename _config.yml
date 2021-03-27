@@ -23,8 +23,8 @@ plugins:
 # Site settings
 url: 'https://mydomain.com'
 baseurl: ''
-title: 'My website'
-description: 'This is my new website'
+title: 'Achromantic'
+description: 'Hello everyone.'
 permalink: pretty
 logo: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c?s=52"
 
@@ -51,10 +51,10 @@ collections:
   posts:
     title: Posts
     output: true
-    description: "My thoughts and ideas"
+    description: "Musings about things aside from the TS's (Taylor Swift | Taylor Series | Time Series)"
     feature_text: |
       Welcome to my blog
-    feature_image: "https://picsum.photos/2560/600?image=866"
+    feature_image: "https://picsum.photos/2560/600?image=1021"
 
 # Collection settings
 defaults:
