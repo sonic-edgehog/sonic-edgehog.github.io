@@ -51,7 +51,7 @@ collections:
   posts:
     title: Posts
     output: true
-    description: "Musings about things aside from the TS's (Taylor Swift | Taylor Series | Time Series)"
+    description: "Musings about things aside from the TS's (Taylor Swift,Taylor Series,Time Series)"
     feature_text: |
       Welcome to my blog
     feature_image: "https://picsum.photos/2560/600?image=1021"
