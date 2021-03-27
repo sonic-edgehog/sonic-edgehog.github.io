@@ -1,8 +1,8 @@
 ---
-title: Welcome to my website
-feature_image: "https://picsum.photos/1300/400?image=989"
+title: Welcome to the blog. It's been waiting for you.
+feature_image: "https://picsum.photos/1300/400?image=1022"
 feature_text: |
-  ## Hello world
+  ## Not a blank space
 ---
 
-There isn't much going on here yet, but watch this space
+Nice to meet you, where you been? I could show you incredible things.
