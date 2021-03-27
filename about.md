@@ -2,4 +2,4 @@
 title: About this website
 ---
 
-I'm not sure yet what this website is about, but I'm sure I'll work it out soon.
+As a passing blog during this times, I would like to share my learnings while working in the industry. The blogs will be a mix of technical mummo-jumbo, narrative, and some unrelated musings.
