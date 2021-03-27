@@ -1,15 +1,15 @@
 ---
-title: Achromantic
+title: About Alembic
 feature_text: |
-  ## Achromantic
-  Things I like to talk about - Taylor Swift | Taylor Series | Time Series
+  ## Alembic
+  A passing blog about different things aside from three TS's (Taylor Swift, Taylor Series, Time Series).
 feature_image: "https://picsum.photos/1300/400?image=1021"
-excerpt: "With the help of [Jekyll](https://jekyllrb.com/) projects and machine learning techniques, one can see her through songs and learn who's Taylor Swift anyway. A mix of R and Python is used. Are you ready for it?" Other things will be covered soon.
+excerpt: "Alembic is a starting point for [Jekyll](https://jekyllrb.com/) projects. Rather than starting from scratch, this boilerplate is designed to get the ball rolling immediately. Install it, configure it, tweak it, push it."
 ---
 
 Alembic is a starting point for [Jekyll](https://jekyllrb.com/) projects. Rather than starting from scratch, this boilerplate is designed to get rolling immediately. Install it, configure it, tweak it, push it.
 
-{% include button.html text="Fork the layout" icon="github" link="https://github.com/daviddarnes/alembic" color="#0366d6" %}  {% include button.html text="Tweet it" icon="twitter" link="https://twitter.com/intent/tweet/?url=https://alembic.darn.es&text=Alembic%20-%20A%20Jekyll%20boilerplate%20theme&via=DavidDarnes" color="#0d94e7" %}
+{% include button.html text="Fork the layout" icon="github" link="https://github.com/daviddarnes/alembic" color="#0366d6" %} {% include button.html text="Tweet it" icon="twitter" link="https://twitter.com/intent/tweet/?url=https://alembic.darn.es&text=Alembic%20-%20A%20Jekyll%20boilerplate%20theme&via=DavidDarnes" color="#0d94e7" %}
 
 ## Features
 
