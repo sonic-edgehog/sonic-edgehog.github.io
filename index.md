@@ -39,6 +39,8 @@ Here are a few examples of Alembic out in the wild being used in a variety of wa
 
 ## Installation
 
+{% include figure.html %}
+
 ### Quick setup
 
 To give you a running start I've put together some starter kits that you can download, fork or even deploy immediately:
