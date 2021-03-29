@@ -13,3 +13,5 @@ The work is not associated with the following:
 - A [song](https://www.youtube.com/watch?v=74f_dqA70gM) by Hatsune Miku.
 - An [account](https://flat.io/achromantic) of posting music sheets.
 - A Twitter [account](https://twitter.com/Achromantic) from Canada.
+
+The creator thanked [the template owner](https://github.com/daviddarnes/alembic) for the layout and [picsum](https://picsum.photos/) for the photos used.
