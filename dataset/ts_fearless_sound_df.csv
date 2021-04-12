@@ -1,0 +1,26 @@
+﻿track_name,album_name,danceability,energy,loudness,speechiness,acousticness,instrumentalness,liveness,valence,tempo
+Fearless,Fearless (Taylor's Version),0.569,0.741,-4.963,0.0282,0.0122,0,0.333,0.43,100.118
+Fifteen,Fearless (Taylor's Version),0.559,0.646,-4.61,0.0272,0.116,0,0.32,0.289,95.466
+Love Story,Fearless (Taylor's Version),0.627,0.792,-4.311,0.031,0.13,3.97E-06,0.0845,0.415,119.054
+Hey Stephen,Fearless (Taylor's Version),0.788,0.571,-6.135,0.0296,0.106,0,0.0934,0.797,115.99
+White Horse,Fearless (Taylor's Version),0.423,0.517,-7.377,0.0486,0.369,0,0.177,0.366,185.262
+You Belong With Me,Fearless (Taylor's Version),0.632,0.773,-4.856,0.0346,0.0623,0,0.0885,0.474,130.033
+Breathe,Fearless (Taylor's Version),0.506,0.626,-6.066,0.0287,0.156,0,0.228,0.321,148.035
+Tell Me Why,Fearless (Taylor's Version),0.578,0.909,-3.669,0.0628,0.0222,0,0.333,0.541,100.023
+You're Not Sorry,Fearless (Taylor's Version),0.506,0.444,-4.99,0.0285,0.0538,0,0.123,0.241,133.873
+The Way I Loved You,Fearless (Taylor's Version),0.402,0.732,-4.665,0.0484,0.0033,0,0.108,0.472,161.032
+Forever & Always,Fearless (Taylor's Version),0.598,0.821,-4.433,0.0447,0.0231,0,0.143,0.673,128.03
+The Best Day,Fearless (Taylor's Version),0.642,0.576,-8.524,0.0282,0.488,0,0.159,0.469,125
+Change,Fearless (Taylor's Version),0.499,0.815,-4.063,0.0341,0.000191,0,0.181,0.344,95.999
+Jump Then Fall,Fearless (Taylor's Version),0.572,0.69,-6.201,0.0358,0.0474,0,0.0897,0.624,160.111
+Untouchable,Fearless (Taylor's Version),0.393,0.531,-6.112,0.0329,0.0181,0,0.169,0.224,200.391
+Come In With The Rain,Fearless (Taylor's Version),0.476,0.564,-5.677,0.0269,0.0406,0,0.102,0.167,143.929
+Superstar,Fearless (Taylor's Version),0.454,0.555,-6.69,0.0283,0.157,0,0.343,0.171,171.862
+The Other Side Of The Door,Fearless (Taylor's Version),0.432,0.873,-4.367,0.0577,0.0279,0,0.167,0.629,163.936
+Today Was A Fairytale,Fearless (Taylor's Version),0.482,0.779,-5.025,0.0409,0.0135,0,0.296,0.328,158.162
+You All Over Me (From The Vault),Fearless (Taylor's Version),0.599,0.494,-7.61,0.0372,0.816,0,0.101,0.44,142.893
+Mr. Perfectly Fine (From The Vault),Fearless (Taylor's Version),0.66,0.817,-6.269,0.0521,0.162,0,0.0667,0.714,135.942
+We Were Happy (From The Vault),Fearless (Taylor's Version),0.609,0.373,-8.819,0.0263,0.849,0,0.0779,0.13,106.007
+That's When (From The Vault),Fearless (Taylor's Version),0.588,0.608,-7.062,0.0365,0.225,0,0.092,0.508,90.201
+Don't You (From The Vault),Fearless (Taylor's Version),0.563,0.473,-11.548,0.0503,0.514,1.20E-05,0.109,0.405,101.934
+Bye Bye Baby (From The Vault),Fearless (Taylor's Version),0.624,0.624,-7.86,0.0539,0.334,0,0.0995,0.527,80.132
