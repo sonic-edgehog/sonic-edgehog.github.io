@@ -1,0 +1,126 @@
+---
+title: "Network of Taylor Swift's Album Credits"
+author: "Eduard De Guzman"
+date: "4/13/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+For this project, we have created a mini-version of the networks shown in [this](https://sonic-edgehog.github.io/general/2021/04/04/ts-blog-001/). Since `plotly` in `Python` does not have the ready to made interactive version of the `networkx`counterpart, we have used the platform for that. But before graphing, we have saved the necessary data frames of nodes and links for production and lyric credit.
+
+For details regarding the library, please see this [documentation](https://www.rdocumentation.org/packages/networkD3/versions/0.4/topics/forceNetwork)
+
+## Exploration
+
+We used `magrittr` to save the file into a stand-alone html and `networkD3`, a library with integration of styles from `JS` and `R`.
+
+```{r introduction}
+library(networkD3)
+library(magrittr)
+
+
+ts_prod_all_link = read.csv('ts_network_prod_all.csv')
+ts_prod_all_node = read.csv('ts_nodes_prod_all.csv')
+```
+
+Here are the contents of the following tables:
+
+```{r}
+head(ts_prod_all_link)
+```
+
+The first two columns are the pairs that worked together in producing the song and the last column is the number of occurrences.
+
+```{r}
+head(ts_prod_all_node)
+```
+For the dataset, `size` is the number of works a producer has solely done plus one while `album_work` is the eras in which a producer has mainly worked only.
+
+## Data Manipulation
+
+Since the package `networkD3` does not work on pairs which are non-numeric, we have used the left join for both datasets. To highlight the graphs which **Jack Antonoff** has worked on, we modified the links.
+
+```{r}
+ts_prod_all_link = merge(x=ts_prod_all_link,y=ts_prod_all_node[c("name_a","source")],by="name_a",all.x=TRUE)
+
+ts_prod_all_link = merge(x=ts_prod_all_link,y=ts_prod_all_node[c("name_b","sink")],by="name_b",all.x=TRUE)
+
+jack_number = which(ts_prod_all_node == "Jack Antonoff", arr = TRUE)[1] - 1
+jacklink = which(ts_prod_all_link == jack_number, arr = TRUE)[, 1]
+
+jack_color = ifelse(1:nrow(ts_prod_all_link) %in% jacklink, "#bf3eff", "#666")
+```
+
+## Plot of Producers Network.
+
+Then, we plot the graphs themselves. We have specified the colors for each category in `album_work` column and modified the sizes according to a function.
+
+```{r}
+graph_prod = forceNetwork(Links = ts_prod_all_link, Nodes = ts_prod_all_node,Nodesize="size",
+             Source = "source", Target = "sink",colourScale=JS("d3.scaleOrdinal(['#383867', '#b63e36', '#33431e', '#b74a70','#a36629']);"),
+             Value = "value", NodeID = "name_a",radiusCalculation = "Math.sqrt(d.nodesize)+7",
+             Group = "album_work", opacity = 0.8,
+             fontFamily = "sans-serif",
+             fontSize = 20,legend=TRUE,zoom = TRUE,bounded = TRUE,
+             opacityNoHover = 0.1,linkColour = jack_color)
+graph_prod
+```
+
+It seems that one, everyone except the pair who worked on `A Perfectly Good Heart` in the first album are connected. Two, **Jack Antonoff** has connected the pop and alternative musicians with his participation both in `1989` and `folklore`.
+
+```{r}
+graph_prod %>% saveNetwork(file = 'ts_graph_prod_all.html',selfcontained = TRUE)
+```
+
+To save the network as a stand-alone, I used the function for the package.
+
+## Replication for Co-Writers
+
+First, we read the tables.
+
+```{r}
+ts_write_all_link = read.csv('ts_network_write_all.csv')
+ts_write_all_node = read.csv('ts_nodes_write_all.csv')
+```
+
+Then, we joined them together.
+
+```{r}
+ts_write_all_link = merge(x=ts_write_all_link,y=ts_write_all_node[c("name_a","source")],by="name_a",all.x=TRUE)
+
+ts_write_all_link = merge(x=ts_write_all_link,y=ts_write_all_node[c("name_b","sink")],by="name_b",all.x=TRUE)
+
+jack_number = which(ts_write_all_node == "Jack Antonoff", arr = TRUE)[1] - 1
+jacklink = which(ts_write_all_link == jack_number, arr = TRUE)[, 1]
+
+jack_color = ifelse(1:nrow(ts_write_all_link) %in% jacklink, "#bf3eff", "#666")
+```
+
+After that, we graphed them.
+
+```{r}
+graph_write = forceNetwork(Links = ts_write_all_link, Nodes = ts_write_all_node,Nodesize="size",
+             Source = "source", Target = "sink",colourScale=JS("d3.scaleOrdinal(['#b63e36','#33431e','#b74a70','#a36629']);"),
+             Value = "value", NodeID = "name_a",radiusCalculation = "Math.sqrt(d.nodesize)+7",
+             Group = "album_work", opacity = 0.8,fontFamily = "sans-serif",
+             fontSize = 20, legend=TRUE,zoom = TRUE,bounded = TRUE,
+             opacityNoHover = 0.1,linkColour = jack_color)
+graph_write
+```
+
+Among Taylor's co-writers, there are two main sub-graphs. Namely, the one who worked for `1989` and `reputation` while the another one worked for albums `post-Red`. In this case, **Jack Antonoff** is Taylor's main co-writer from albums `post-Red`. Furthemore, **Max Martin** and **Shellback** have written together the most yet the former and Taylor Swift only worked together once, which is `All You Had To Do Was Stay` from `1989`.
+
+```{r}
+graph_write %>% saveNetwork(file = 'ts_graph_write_all.html',selfcontained = TRUE)
+```
+
+Finally, we saved them.
+
+## Conclusion
+
+We concluded that **Nathan Chapman**, **Aaron Dessner**, and **Jack Antonoff** are Taylor's main co-workers. Also, most writers and producers (excluding Jack Antonoff and the duo Max Martin-Shellback) in `1989` and `reputation` worked only during those album. Lastly, **Aaron Dessner** likes to work alone or solely with Taylor.
