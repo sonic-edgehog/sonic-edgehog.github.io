@@ -1,7 +1,6 @@
 ---
 title: "Network of Taylor Swift's Album Credits"
 author: "Eduard De Guzman"
-date: "4/13/2021"
 output: html_document
 ---
 
