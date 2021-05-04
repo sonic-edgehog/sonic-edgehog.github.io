@@ -2,7 +2,7 @@
 title: About Achromantic
 ---
 
-As a passing blog during these times, I would like to share my learnings while working in the industry. The posts will be a mix of technical mumbo-jumbo, narrative, and some unrelated musings. It is a wordplay on aromatic, achromatic, and romantic.
+As a passing blog during these times, I would like to share my learnings while working in the industry. The posts will be a mix of technical mumbo-jumbo, narrative, and some unrelated musings. It is a wordplay on aromatic, achromatic, and antic.
 
 The creator is a typical analyst who liked to work on different things aside from math.
 
